@@ -1,26 +1,26 @@
-# DerainZoo (Single Image vs. Video Based)
-[Youzhao Yang](https://github.com/nnuyi), [Hong Lu](http://homepage.fudan.edu.cn/honglu/machine-vision-lab/) in [Fudan Machine Vision Lab](https://github.com/FudanMV)
-
+# 去雨汇总 (Single Image)
+[Jin](https://github.com/jin-ss)
+In [SCUT](https://www.scut.edu.cn/)
 ## 1 Description
-   * DerainZoo: A list of deraining methods. Papers, codes and datasets are maintained. Other sources about deraining can be observed in [web1](https://github.com/TaiXiangJiang/FastDeRain) and [web2](https://github.com/hongwang01/Video-and-Single-Image-Deraining).
+   * Derain--Zoo: 去雨的一些论文，方法代码，数据集汇总
+   * 其他
+   [FastDeRain](https://github.com/TaiXiangJiang/FastDeRain)
+   [hongwang](https://github.com/hongwang01/Video-and-Single-Image-Deraining).
 
-   * Datasets for single image deraining are available at the [website](https://github.com/nnUyi/DerainZoo/blob/master/DerainDatasets.md).
-   
-   * More datasets about other image processing task (brightening, HDR, color enhancement, and inpainting) are available [here](https://github.com/nnUyi/Image-Processing-Datasets).
+   *[datasets](https://github.com/nnUyi/DerainZoo/blob/master/DerainDatasets.md).
 
-## 2 Image Quality Metrics
-* PSNR (Peak Signal-to-Noise Ratio) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4550695) [[matlab code]](https://www.mathworks.com/help/images/ref/psnr.html) [[python code]](https://github.com/aizvorski/video-quality)
-* SSIM (Structural Similarity) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1284395) [[matlab code]](http://www.cns.nyu.edu/~lcv/ssim/ssim_index.m) [[python code]](https://github.com/aizvorski/video-quality/blob/master/ssim.py)
-* VIF (Visual Quality) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1576816) [[matlab code]](http://sse.tongji.edu.cn/linzhang/IQA/Evalution_VIF/eva-VIF.htm)
-* FSIM (Feature Similarity) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5705575) [[matlab code]](http://sse.tongji.edu.cn/linzhang/IQA/FSIM/FSIM.htm)
-* NIQE (Naturalness Image Quality Evaluator) [[paper]](http://live.ece.utexas.edu/research/Quality/niqe_spl.pdf)[[matlab code]](http://live.ece.utexas.edu/research/Quality/index_algorithms.htm)[[python code]](https://github.com/aizvorski/video-quality/blob/master/niqe.py)
+## 2 评估指标
+* PSNR (峰值信噪比) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4550695) [[matlab code]](https://www.mathworks.com/help/images/ref/psnr.html) [[python code]](https://github.com/aizvorski/video-quality)
+* SSIM (结构相似性) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1284395) [[matlab code]](http://www.cns.nyu.edu/~lcv/ssim/ssim_index.m) [[python code]](https://github.com/aizvorski/video-quality/blob/master/ssim.py)
+* VIF (视觉质量) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1576816) [[matlab code]](http://sse.tongji.edu.cn/linzhang/IQA/Evalution_VIF/eva-VIF.htm)
+* FSIM (特征相似性) [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5705575) [[matlab code]](http://sse.tongji.edu.cn/linzhang/IQA/FSIM/FSIM.htm)
+* NIQE (自然图像质量评估) [[paper]](http://live.ece.utexas.edu/research/Quality/niqe_spl.pdf)[[matlab code]](http://live.ece.utexas.edu/research/Quality/index_algorithms.htm)[[python code]](https://github.com/aizvorski/video-quality/blob/master/niqe.py)
 
 **Image & Video Quality Assessment Algorithms [[software release]](http://live.ece.utexas.edu/research/Quality/index_algorithms.htm)[[Texas Lab]](http://live.ece.utexas.edu/research/quality/)**
 
-## 3 Single Image Deraining
-### 3.1 Datasets
+## 3 数据集
 ------------
-#### 3.1.1 Synthetic Datasets
+### 3.1 Synthetic Datasets
 * Rain12 [[paper](https://ieeexplore.ieee.org/document/7780668/)] [[dataset](http://yu-li.github.io/paper/li_cvpr16_rain.zip)] (2016 CVPR)
 * Rain100L_old_version [[paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Yang_Deep_Joint_Rain_CVPR_2017_paper.pdf)][[dataset](http://www.icst.pku.edu.cn/struct/Projects/joint_rain_removal.html)](2017 CVPR)
   * Rain100L_new_version [[paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Yang_Deep_Joint_Rain_CVPR_2017_paper.pdf)][[dataset](http://www.icst.pku.edu.cn/struct/Projects/joint_rain_removal.html)]
@@ -31,14 +31,26 @@
 * Rain1400 [[paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Fu_Removing_Rain_From_CVPR_2017_paper.pdf)][[dataset](https://xueyangfu.github.io/projects/cvpr2017.html)] (2017 CVPR)
 * Heavy Rain Dataset [[paper](http://export.arxiv.org/pdf/1904.05050)][[dataset](https://drive.google.com/file/d/1rFpW_coyxidYLK8vrcfViJLDd-BcSn4B/view)] (2019 CVPR)
 
-#### 3.1.2 Real-world Datasets
+### 3.2 Real-world Datasets
 * Practical_by_Yang [[paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Yang_Deep_Joint_Rain_CVPR_2017_paper.pdf)][[dataset](http://www.icst.pku.edu.cn/struct/Projects/joint_rain_removal.html)] (2017 CVPR)
 * Practica_by_Zhang [[paper](https://arxiv.org/abs/1701.05957)][[dataset](https://github.com/hezhangsprinter/ID-CGAN)] (2017 Arxiv)
 * Real-world Paired Rain Dataset [[paper](https://arxiv.org/pdf/1904.01538.pdf)][[dataset](https://stevewongv.github.io/derain-project.html)] (2019 CVPR)
 
-### 3.2 Papers
+### 4 Papers
 --------------
 ### 2021
+* DerainRLNet [[paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_Robust_Representation_Learning_With_Feedback_for_Single_Image_Deraining_CVPR_2021_paper.pdf)][[code](https://github.com/LI-Hao-SJTU/DerainRLNet)][[web](https://github.com/LI-Hao-SJTU)]
+   * Chen, Chenghao etc. Robust Representation Learning with Feedback for Single Image Deraining. (CVPR 2021)
+
+* VRGNet [[paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_From_Rain_Generation_to_Rain_Removal_CVPR_2021_paper.pdf)][[code](https://github.com/hongwang01/VRGNet)][[web](https://github.com/hongwang01)]
+   * Wang, Hong etc. From Rain Generation to Rain Removal. (CVPR 2021)
+
+* IDCL [[paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Zhou_Image_De-Raining_via_Continual_Learning_CVPR_2021_paper.pdf)][[code]()][[web]()]
+   * Zhou, Man etc. Image De-raining via Continual Learning. (CVPR 2021)
+
+* DRG [[paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Yue_Semi-Supervised_Video_Deraining_With_Dynamical_Rain_Generator_CVPR_2021_paper.pdf)][[code](https://github.com/zsyOAOA/S2VD)][[web](https://github.com/zsyOAOA)]
+   * Yue, Zongsheng etc. Semi-Supervised Video Deraining with Dynamical Rain Generator. (CVPR 2021)
+
 * MPRNet [[paper](https://arxiv.org/abs/2102.02808)][[code](https://github.com/swz30/MPRNet)][[web](https://github.com/swz30)]
    * Zamir et al. Multi-Stage Progressive Image Restoration. (CVPR 2021)
 
@@ -266,45 +278,8 @@
 * Image Decomposition [paper](http://www.ee.nthu.edu.tw/cwlin/Rain_Removal/tip_rain_removal_2011.pdf)][[code](http://www.ee.nthu.edu.tw/~cwlin/pub.htm)][web]
   * Kang, Liwei et al. Automatic Single-Image-Based Rain Streaks Removal via Image Decomposition. (2012 TIP)
   
-## 4 Video Based Deraining
-### 2019
-* D3R-Net [[paper](http://www.icst.pku.edu.cn/struct/Pub%20Files/2019/ywh_tip19.pdf)][code][web]
-   * Yang, Wenhan et al. D3R-Net: Dynamic Routing Residue Recurrent Network for Video Rain Removal. (2019 TIP)
 
-### 2018
-* MSCSC [[paper](https://pan.baidu.com/s/1iiRr7ns8rD7sFmvRFcxcvw)][[code](https://github.com/MinghanLi/MS-CSC-Rain-Streak-Removal)] [[web](https://sites.google.com/view/cvpr-anonymity)][[video](https://www.youtube.com/watch?v=tYHX7q0yK4M)]
-    * Li, Minghan et al. Video Rain Streak Removal By Multiscale ConvolutionalSparse Coding. (2018 CVPR)
-
-* CNN Framework [[paper](https://arxiv.org/abs/1803.10433)][code][[web Chen](https://github.com/hotndy/SPAC-SupplementaryMaterials)] [[web Chau](http://www.ntu.edu.sg/home/elpchau/)]
-  * Chen, Jie et al. Robust Video Content Alignment and Compensation for Rain Removal in a CNN Framework. (2018 CVPR)
-  * Chen, Jie et al. Robust Video Content Alignment and Compensation for Clear Vision Through the Rain [[paper](https://arxiv.org/abs/1804.09555)][code][web](*tips: I guess this is the extended journal version*)
-
-* Erase or Fill [[paper](http://openaccess.thecvf.com/content_cvpr_2018/papers/Liu_Erase_or_Fill_CVPR_2018_paper.pdf)][[code](https://github.com/flyywh/J4RNet-Deep-Video-Deraining-CVPR-2018)][[web Liu](http://www.icst.pku.edu.cn/struct/people/liujiaying.html)] [[web Yang](http://www.icst.pku.edu.cn/struct/people/whyang.html)]
-    * Liu, Jiaying et al. Erase or Fill? Deep Joint Recurrent Rain Removal and Reconstruction in Videos. (2018 CVPR)
-
-### 2017
-* MoG [[paper](http://openaccess.thecvf.com/content_iccv_2017/html/Wei_Should_We_Encode_ICCV_2017_paper.html)] 
-[[code](https://github.com/wwxjtu/RainRemoval_ICCV2017)][[web](https://github.com/wwxjtu/RainRemoval_ICCV2017)]
-  * Wei, Wei et al. Should We Encode Rain Streaks in Video as Deterministic or Stochastic? (2017 ICCV)
-
-* FastDeRain [[paper](http://openaccess.thecvf.com/content_cvpr_2017/html/Jiang_A_Novel_Tensor-Based_CVPR_2017_paper.html)][[code](https://github.com/TaiXiangJiang/FastDeRain)]
-  * Jiang, Taixiang et al. A novel tensor-based video rain streaks removal approach via utilizing discriminatively intrinsic priors. (2017 CVPR)
-
-* Matrix Decomposition [[paper](http://openaccess.thecvf.com/content_cvpr_2017/html/Ren_Video_Desnowing_and_CVPR_2017_paper.html)][code][web]
-  * Ren, Weilong et al. Video Desnowing and Deraining Based on Matrix Decomposition. (2017 CVPR)
-
-### 2015-2016
-* Adherent Raindrop Modeling [[paper](https://ieeexplore.ieee.org/abstract/document/7299675/)][code][[web](http://www.cvl.iis.u-tokyo.ac.jp/~yousd/CVPR2013/Shaodi_CVPR2013.html)]
-  * You, Shaodi et al. Adherent raindrop modeling, detectionand removal in video. (2016 TPAMI)
-
-* Low-rank Matrix Completion [[paper](https://ieeexplore.ieee.org/abstract/document/7101234/)][[code](http://mcl.korea.ac.kr/~jhkim/deraining/)][web]
-  * Kim, JH et al. Video deraining and desnowing using temporal correlation and low-rank matrix completion. (2015 TIP)
-
-* Utilizing Local Phase Information [[paper](https://link.springer.com/article/10.1007/s11263-014-0759-8)][code][web]
-  * Santhaseelan et al. Utilizing local phase information to remove rain from video. (2015 IJCV)
 
 ## 5 Acknowledgement
-- Thanks for the sharing of codes of image quality metrics by [Wang, Hong](https://github.com/hongwang01/Video-and-Single-Image-Deraining).
+- 评估指标来自[Wang, Hong](https://github.com/hongwang01/Video-and-Single-Image-Deraining).
 
-## 6 Contact
-- e-mail: yzyang17@fudan.edu.cn
